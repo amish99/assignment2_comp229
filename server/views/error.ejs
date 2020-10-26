@@ -1,0 +1,21 @@
+<!--Assignment 2
+Student: amish tangri  301108852
+Course: Web Application Development SEC.004  COMP229004-2020F
+Date: October 23, 2020 -->
+
+
+
+<%- include partials/header.ejs%>
+  
+<%- include partials/mainNav.ejs%>
+
+<div class = "container">
+<h1><%= message %></h1>
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre>
+</div>
+
+<%- include partials/bottomNav.ejs%>
+ 
+<%- include partials/footer.ejs%>
+

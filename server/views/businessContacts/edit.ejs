@@ -1,0 +1,99 @@
+<!--Assignment 2
+Student: Amish tangri 301108446
+Course: Web Application Development SEC.001  COMP229004-2020F
+Date: October 24, 2020 -->
+
+<%- include ../partials/header.ejs%>
+  
+<!--Main Navigation-->
+<nav class="navbar  navbar-expand-lg navbar-dark" style="background-color:slateblue; " >
+    <a class="navbar-brand" href="/"><img style="width: 30%; height: 48px;" src="..\..\assets\images\logo1.jpg" alt=""> </a>
+    <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+ 
+        <% if(title == "Home") { %>
+        <li class="nav-item active ">
+        <% } else { %>
+          <li class="nav-item ">
+       <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-house-user"></i> Home </a>
+        </li>
+
+        <% if(title == "About Me") { %>
+        <li class="nav-item active ">
+        <% } else { %>
+          <li class="nav-item ">
+       <% } %>
+          <a class="nav-link" href="/about"><i class="far fa-lg fa-question-circle"></i> About </a>
+        </li>
+
+        <% if(title == "Projects") { %>
+        <li class="nav-item active ">
+        <% } else { %>
+          <li class="nav-item ">
+       <% } %>
+          <a class="nav-link" href="/projects"><i class="fas fa-lg fa-toolbox"></i> Projects </a>
+        </li>
+
+        <% if(title == "Services") { %>
+        <li class="nav-item active ">
+        <% } else { %>
+          <li class="nav-item ">
+       <% } %>
+          <a class="nav-link" href="/services"><i class="far fa-lg fa-list-alt"></i> Services </a>
+        </li>
+
+        <% if(title == "Contact Me") { %>
+        <li class="nav-item active ">
+        <% } else { %>
+          <li class="nav-item ">
+       <% } %>
+          <a class="nav-link" href="/contact"><i class="fas fa-lg fa-phone-square-alt"></i> Contact</a>
+        </li>
+
+    </div>
+  </nav>
+
+
+  <!--Main Content of the Page-->
+  <div style=" display: block; margin-top: 2cm; width: 60%; margin-left: 470px; " class="container">
+    <div class= "row justify-content-md-center>">
+       <div class="col-md-offset-3 col-md-8">
+            <h1 ><%= title%> </h1>
+           
+          <form class=" form" method="POST">
+              <div class="form-group">
+                <label for="nameTextField">Name</label>
+                <input type="text" class="form-control" name="name" id="nameTextField" placeholder="Enter name..." value="<%=contact.name%>" required>
+              </div>
+
+              <div class="form-group">
+                <label for="numberField">Contact Number</label>
+                <input type="number" class="form-control" name="number" id="numberField" placeholder="Enter contact number..." value="<%=contact.number%>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailTextField">Email</label>
+                <input type="email" class="form-control" name="email" id="emailTextField" placeholder="Enter email..." value="<%=contact.email%>" required>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+             <i class="fas fa-edit"></i>Submit
+            </button>
+
+            <a href="/contact-list" class="btn btn-warning">
+            <i class="fas fa-undo "></i>Cancel</a>
+              
+          </form>
+          </div>
+     </div>
+</div>
+
+
+<%- include ../partials/bottomNav.ejs%>
+ 
+<%- include ../partials/footer.ejs%>

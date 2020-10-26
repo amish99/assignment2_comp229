@@ -1,0 +1,49 @@
+<!--Assignment 2
+Student: amish tangri 301108446
+Course: Web Application Development SEC.001  COMP229004-2020F
+Date: October 24, 2020 -->
+
+<%- include ../partials/header.ejs%>
+  
+<%- include ../partials/mainNav.ejs%>
+
+<main class="container">
+    <!--message area-->
+    <%if(messages.length > 0) {%>
+        <div class="alert alert-danger">
+           <%= messages%>
+        </div>
+        
+    <% }  %> 
+
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <h1 style="color: goldenrod; margin-top: 2cm;">Please Login</h1>
+            <form method="POST" autocomplete="off">
+                <fieldset class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" 
+                     class="form-control" placeholder="Enter username" required autofocus>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="username">Password</label>
+                    <input type="password" name="password" id="password" 
+                     class="form-control" placeholder="Enter password" required>
+                </fieldset>
+
+                <fieldset class="form-group text-right">
+                   <input type="submit" value="Login" class="btn btn-success">
+                   <a href="/">
+                      <input type="button" class="btn btn-warning" value="Cancel">
+                   </a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<%- include ../partials/bottomNav.ejs%>
+ 
+<%- include ../partials/footer.ejs%>

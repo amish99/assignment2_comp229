@@ -1,0 +1,76 @@
+<!--Assignment 2
+Student: Amish tangri 301108446
+Course: Web Application Development SEC.001  COMP229001-2020F
+Date: October 24, 2020 -->
+
+
+
+
+<%- include partials/header.ejs%>
+  
+<%- include partials/mainNav.ejs%>
+
+   <!--Main Content of the Page-->
+  <main class="container">
+    <div  style="background-color: white">
+      <h1 style="text-align-last: center; color: goldenrod; margin-top: 2cm; " class="display-5">  <%= title %>  </h1>
+      <hr class="my-4">
+    </div>
+  </main>
+
+<div  class= "row justify-content-md-center">
+  <div style="border-style: solid; padding: 3px; border-color: teal; border-radius: 8px;  "  class = "col-lg-4 col-md-4 col-sm-5 col-xs-5">
+    <blockquote class="blockquote text-center">
+      <p class="mb-3"><strong>Email:</strong> <a href = "mailto: amishtangri123@gmail.com">amishtangri123@gmail.com</a></p>
+      <p class="mb-0"><strong>Linkedin: </strong><a href = "https://www.linkedin.com/in/amish-tangri-863a11190/">https://www.linkedin.com/in/amish-tangri-863a11190/</a></p>
+    </blockquote>
+      
+  </div>
+</div><br><br>
+
+<h3 style="text-align-last: center; color: goldenrod;  " class="display-5"> ... or leave a message </h3><br><br>
+
+<div class= "row justify-content-md-center">
+  <div class = "col-lg-5 col-md-5 col-sm-8 col-xs-8">
+   <form>
+
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" required placeholder="Please enter your first name..." >
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last name</label>
+    <input type="text" class="form-control" id="lname" required placeholder="Please enter your last name...">
+  </div>
+
+  <div class="form-group">
+    <label for="tel">Contact Number</label>
+    <input type="tel" class="form-control" id="tel" placeholder="Please enter your contact number...">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+  </div>
+ 
+
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea class="form-control" id="message" rows="3" placeholder="Type your message here..."></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="sendButton"><i class="far fa-envelope"></i> Send</button>
+  <button type="reset" class="btn btn-warning" id="resetButton"><i class="fas fa-window-close"></i> Cancel</button>
+
+   </form> <br><br><br>
+ </div>
+</div>
+
+
+ 
+<%- include partials/bottomNav.ejs%>
+ 
+<%- include partials/footer.ejs%>
+
+

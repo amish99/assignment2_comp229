@@ -1,0 +1,73 @@
+<!--Assignment 2
+Student: Amish tangri 301108446
+Course: Web Application Development SEC.001  COMP229001-2020F
+Date: October 24, 2020 -->
+
+
+
+<%- include partials/header.ejs%>
+  
+<%- include partials/mainNav.ejs%>
+
+    <!--Main Content of the Page-->
+  <main class="container">
+    <div style="background-color: white">
+      <h1 style="text-align-last: center; color: goldenrod; margin-top: 2cm; " class="display-5">  <%= title %>  </h1>
+      <hr class="my-4">
+ </main>
+</div>
+
+<div class= "row justify-content-md-center ">
+    <div    style="width: 980px; margin-left: auto; margin-right: auto;">
+     <p class="lead" class="text-justify" style="text-align: center;">Here are some of the projects I have been working on so far.
+    </p>
+     <br>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Project</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><img style="height: 200px;" src="\assets\images\project1.png" alt=""></th>
+      <td><strong>Website Project</strong></td>
+      <td>
+        <p>
+          I completed this project for the Web Design course in the first semester of my program.
+          I had to to design a multiple-page website using skills and concepts learned throughout the course.
+       </p>
+     </td>
+    </tr>
+    <tr>
+      <th scope="row"><img src="\assets\images\project4.jpg" style="height: 200px; width: 400px;" alt=""></th>
+      <td><strong>Software Requirements Specification (SRS) Group Project</strong></td>
+      <td>The objective of this group project was to identify a problem for which a software could be 
+        developed, and then prepare a SRS about it. In particular, I worked on the Domain Class Diagram
+        using Visual Paradigm Online application.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><img src="\assets\images\project2.png" style="height: 200px;" alt=""></th>
+      <td><strong>Express Portfolio Site</strong></td>
+      <td>I completed this project in the third semester of my program. The goal was to develop
+        my Personal Portfolio Website and then host it on a cloud server. More specifically, I had
+        to use ExpressJS and EJS templating engine to build the site.
+      </td>
+    </tr>
+  </tbody>
+</table><br><br>
+
+</div>
+</div>
+  
+
+ 
+<%- include partials/bottomNav.ejs%>
+ 
+<%- include partials/footer.ejs%>
+
+
